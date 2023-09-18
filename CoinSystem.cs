@@ -6,35 +6,17 @@ using UnityEngine;
 
 public class CoinSystem : MonoBehaviour
 {
-    [SerializeField] public List<GameObject> coinScore = new List<GameObject>();
     [SerializeField] public int coinCount = 0;
-    public GameObject coin;
-    
+
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.tag != "Player"){
-            gameObject.SetActive(false);
-            updatesCoinSystem();
-            Debug.Log("Coin has taken");
-        }
-    }
-    
-    /*private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.gameObject.tag == "Coin")
+        if (other.CompareTag("Coin"))
         {
-            gameObject.SetActive(false);
-            updatesCoinSystem();
+            other.gameObject.SetActive(false); // Deactivates the coin
+            coinCount++; // Increment the coin score
+            Debug.Log(coinCount);
             Debug.Log("Coin has taken");
         }
-    }*/
-    
-    void updatesCoinSystem()
-    {
-        coinScore.Add(coin);
-        coinCount++;
-        Debug.Log(coinCount);
     }
 
-    
 }
