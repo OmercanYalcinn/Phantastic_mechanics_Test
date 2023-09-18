@@ -5,4 +5,6 @@ DONE:
   Upwards Jump with SPACE bar
   A and D keys for left/right control for Jump
   Auto Force Boost from Platform to Upward
-  Came Follows to Player
+  Camera Follows to Player
+  Coin System - Console System
+  Text System - Score System
