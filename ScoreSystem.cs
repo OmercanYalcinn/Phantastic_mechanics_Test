@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class ScoreSystem : MonoBehaviour
 {
-    public TextMeshPro scoreText;
+    public TextMeshProUGUI scoreText;
     private CoinSystem _coinSystem;
 
     private void Start()
